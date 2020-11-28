@@ -18,7 +18,7 @@ public class GreetingController {
 	private IGreetingService greetingService;
 	
 	@GetMapping("/greeting")
-	public Greeting greeting(@RequestParam(value = "firstName", defaultValue = "Hello") String firstName, @RequestParam(value = "lastName", defaultValue = "World") String lastName ) {
+	public Greeting greeting(@RequestParam(value = "firstName") String firstName, @RequestParam(value = "lastName") String lastName ) {
 		User user = new User();
 		user.setFirstName(firstName);
 		user.setLastName(lastName);
